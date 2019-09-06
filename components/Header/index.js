@@ -11,30 +11,30 @@
 
 const Header = () => {
   // select parent element
-  const parentElement = document.querySelector(".header-container");
+  const parentElement = document.querySelector('.header-container')
 
   // create elements
-  const header = document.createElement("div");
-  header.classList.add("header");
-  parentElement.appendChild(header);
+  const header = document.createElement('div')
+  header.classList.add('header')
+  parentElement.appendChild(header)
 
   // create span element - date
-  const date = document.createElement("span");
-  date.classList.add("date");
-  date.textContent = "MARCH 28, 2019";
-  header.appendChild(date);
+  const date = document.createElement('span')
+  date.classList.add('date')
+  date.textContent = 'MARCH 28, 2019'
+  header.appendChild(date)
 
   // create h1 element
-  const h1 = document.createElement("h1");
-  h1.textContent = "Lambda Times";
-  header.appendChild(h1);
+  const h1 = document.createElement('h1')
+  h1.textContent = 'Lambda Times'
+  header.appendChild(h1)
 
   // create span element - temp
-  const temp = document.createElement("span");
-  temp.classList.add("temp");
-  temp.textContent = "98°";
+  const temp = document.createElement('span')
+  temp.classList.add('temp')
+  temp.textContent = '98°'
 
-  return header;
-};
+  return header
+}
 
-Header();
+Header()

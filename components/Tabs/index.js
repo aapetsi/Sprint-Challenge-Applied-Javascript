@@ -10,24 +10,23 @@
 
 const Tab = title => {
   // select parent element for topic tab
-  const parentElement = document.querySelector(".topics");
+  const parentElement = document.querySelector('.topics')
   // create div element for topic
-  const topic = document.createElement("div");
-  topic.classList.add("tab");
-  topic.textContent = title;
+  const topic = document.createElement('div')
+  topic.classList.add('tab')
+  topic.textContent = title
 
-  parentElement.appendChild(topic);
-  return topic;
-};
+  parentElement.appendChild(topic)
+  return topic
+}
 
 axios
-  .get("https://lambda-times-backend.herokuapp.com/topics")
+  .get('https://lambda-times-backend.herokuapp.com/topics')
   .then(res => {
-    console.log(res.data);
-    let topics = res.data.topics;
+    const topics = res.data.topics
     // render tab component
-    topics.forEach(topic => Tab(topic));
+    topics.forEach(topic => Tab(topic))
   })
   .catch(err => {
-    console.log(err);
-  });
+    console.log(err)
+  })
